@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/index.js",
+    "static/js/787.c0cfd400.chunk.js": "/static/js/787.c0cfd400.chunk.js",
+    "node_modules/oracledb/build/Release/oracledb-5.5.0-linux-x64.node": "/node_modules/oracledb/build/Release/oracledb-5.5.0-linux-x64.node",
+    "node_modules/oracledb/build/Release/oracledb-5.5.0-win32-x64.node": "/node_modules/oracledb/build/Release/oracledb-5.5.0-win32-x64.node",
+    "node_modules/oracledb/build/Release/oracledb-5.5.0-darwin-x64.node": "/node_modules/oracledb/build/Release/oracledb-5.5.0-darwin-x64.node",
+    "index.html": "/index.html",
+    "node_modules/oracledb/build/Release/oracledb-5.5.0-darwin-x64.node-buildinfo.txt": "/node_modules/oracledb/build/Release/oracledb-5.5.0-darwin-x64.node-buildinfo.txt",
+    "node_modules/oracledb/build/Release/oracledb-5.5.0-linux-x64.node-buildinfo.txt": "/node_modules/oracledb/build/Release/oracledb-5.5.0-linux-x64.node-buildinfo.txt",
+    "node_modules/oracledb/build/Release/oracledb-5.5.0-win32-x64.node-buildinfo.txt": "/node_modules/oracledb/build/Release/oracledb-5.5.0-win32-x64.node-buildinfo.txt",
+    "index.js.map": "/index.js.map",
+    "787.c0cfd400.chunk.js.map": "/static/js/787.c0cfd400.chunk.js.map"
+  },
+  "entrypoints": [
+    "index.js"
+  ]
+}
