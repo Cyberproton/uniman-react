@@ -9,7 +9,6 @@ import {
   Typography,
 } from '@mui/material';
 import { AppTitle } from 'app/components/AppTitle';
-import { login } from 'app/data';
 import { useState } from 'react';
 
 export const LoginPage = props => {
@@ -61,7 +60,6 @@ export const LoginPage = props => {
             <Box my={3} textAlign={'center'}>
               <Button
                 variant="contained"
-                onClick={() => login(username!, password!)}
               >
                 Login
               </Button>
