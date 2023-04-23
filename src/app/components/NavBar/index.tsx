@@ -1,4 +1,9 @@
-import { More, PersonRounded, School } from '@mui/icons-material';
+import {
+  LogoutRounded,
+  More,
+  PersonRounded,
+  School,
+} from '@mui/icons-material';
 import {
   AppBar,
   Box,
@@ -9,13 +14,14 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { NavigationButton, NavigationIconButton } from '../NavigationButton';
+import { logout } from 'app/api';
 
 export function NavBar() {
   const navigate = useNavigate();
 
   return (
     <AppBar position="static" color="transparent">
-      <Container>
+      <Box mx={3}>
         <Toolbar disableGutters>
           <Button
             size="large"
@@ -35,13 +41,19 @@ export function NavBar() {
             }}
           >
             <NavigationButton path="/">Trang Chủ</NavigationButton>
-            <NavigationButton path="/products">Sinh viên</NavigationButton>
+            <NavigationButton path="/transcripts">Bảng điểm</NavigationButton>
             <NavigationIconButton path="/user">
               <PersonRounded fontSize="large" />
             </NavigationIconButton>
-            <NavigationIconButton path="/logout">
-              <PersonRounded fontSize="large" />
-            </NavigationIconButton>
+            <IconButton
+              sx={{ mx: 1 }}
+              onClick={async () => {
+                await logout();
+                navigate('/login');
+              }}
+            >
+              <LogoutRounded fontSize="large" />
+            </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -54,7 +66,7 @@ export function NavBar() {
             </IconButton>
           </Box>
         </Toolbar>
-      </Container>
+      </Box>
     </AppBar>
   );
 }

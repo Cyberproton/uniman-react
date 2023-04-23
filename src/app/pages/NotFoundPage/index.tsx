@@ -7,7 +7,7 @@ export const NotFoundPage = props => {
   return (
     <Container>
       <Box my={6} textAlign={'center'} alignItems={'center'}>
-        <Typography variant="h3" textAlign={'center'} mb={3} color={'error'}>
+        <Typography variant="h3" textAlign={'center'} mb={3}>
           404
         </Typography>
         <Typography variant="h5" textAlign={'center'}>

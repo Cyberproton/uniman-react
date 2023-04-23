@@ -8,12 +8,15 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
+import { login } from 'app/api';
 import { AppTitle } from 'app/components/AppTitle';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const LoginPage = props => {
   const [username, setUsername] = useState<string | null>(null);
   const [password, setPassword] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -60,6 +63,16 @@ export const LoginPage = props => {
             <Box my={3} textAlign={'center'}>
               <Button
                 variant="contained"
+                onClick={() => {
+                  if (username == null || password == null) {
+                    return;
+                  }
+
+                  login(username, password).then(
+                    () => navigate('/'),
+                    err => alert(err.response.data.message),
+                  );
+                }}
               >
                 Login
               </Button>

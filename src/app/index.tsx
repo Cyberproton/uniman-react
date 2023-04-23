@@ -6,6 +6,8 @@ import { NavBar } from './components/NavBar';
 import { HomePage } from './pages/HomePage';
 import { LoginPage } from './pages/LoginPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { UserPage } from './pages/UserPage';
+import { TranscriptsPage } from './pages/TranscriptsPage';
 
 export const App = () => {
   return (
@@ -22,23 +24,27 @@ export const App = () => {
   );
 };
 
+const routeNames = {
+  '/': 'Trang chủ',
+  '/user': 'Thông tin người dùng',
+  '/transcripts': 'Bảng điểm',
+};
+
 const MainLayout = props => {
   return (
     <>
       <NavBar />
-      <Container>
-        <Box my={3}>
-          <Box mt={3} mb={6}>
-            <AppBreadcrumbs />
-          </Box>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/user" element={<LoginPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
+      <Box my={3} mx={3}>
+        <Box mt={3} mb={6}>
+          <AppBreadcrumbs names={routeNames} />
         </Box>
-      </Container>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/transcripts" element={<TranscriptsPage />} />
+          <Route path="/user" element={<UserPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Box>
     </>
   );
 };
