@@ -37,6 +37,13 @@ export const executeSelectQuery = async (
   };
 };
 
+export const executeQuery = async (query: string) => {
+  const res = await client.post(`/query`, {
+    query: query,
+  });
+  return res;
+};
+
 export const login = async (username: string, password: string) => {
   const res = await client.post(`/login`, {
     username: username,

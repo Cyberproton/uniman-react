@@ -26,7 +26,7 @@ export const App = () => {
 
 const routeNames = {
   '/': 'Trang chủ',
-  '/user': 'Thông tin người dùng',
+  '/user': 'Thông tin sinh viên',
   '/transcripts': 'Bảng điểm',
 };
 

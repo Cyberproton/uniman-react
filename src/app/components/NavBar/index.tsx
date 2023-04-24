@@ -42,9 +42,7 @@ export function NavBar() {
           >
             <NavigationButton path="/">Trang Chủ</NavigationButton>
             <NavigationButton path="/transcripts">Bảng điểm</NavigationButton>
-            <NavigationIconButton path="/user">
-              <PersonRounded fontSize="large" />
-            </NavigationIconButton>
+            <NavigationButton path="/user">Sinh viên</NavigationButton>
             <IconButton
               sx={{ mx: 1 }}
               onClick={async () => {
